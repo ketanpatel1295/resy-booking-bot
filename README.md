@@ -3,54 +3,54 @@
 [![Auto Release](https://img.shields.io/badge/release-auto.svg?colorA=888888&colorB=9B065A&label=auto&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACzElEQVR4AYXBW2iVBQAA4O+/nLlLO9NM7JSXasko2ASZMaKyhRKEDH2ohxHVWy6EiIiiLOgiZG9CtdgG0VNQoJEXRogVgZYylI1skiKVITPTTtnv3M7+v8UvnG3M+r7APLIRxStn69qzqeBBrMYyBDiL4SD0VeFmRwtrkrI5IjP0F7rjzrSjvbTqwubiLZffySrhRrSghBJa8EBYY0NyLJt8bDBOtzbEY72TldQ1kRm6otana8JK3/kzN/3V/NBPU6HsNnNlZAz/ukOalb0RBJKeQnykd7LiX5Fp/YXuQlfUuhXbg8Di5GL9jbXFq/tLa86PpxPhAPrwCYaiorS8L/uuPJh1hZFbcR8mewrx0d7JShr3F7pNW4vX0GRakKWVk7taDq7uPvFWw8YkMcPVb+vfvfRZ1i7zqFwjtmFouL72y6C/0L0Ie3GvaQXRyYVB3YZNE32/+A/D9bVLcRB3yw3hkRCdaDUtFl6Ykr20aaLvKoqIXUdbMj6GFzAmdxfWx9iIRrkDr1f27cFONGMUo/gRI/jNbIMYxJOoR1cY0OGaVPb5z9mlKbyJP/EsdmIXvsFmM7Ql42nEblX3xI1BbYbTkXCqRnxUbgzPo4T7sQBNeBG7zbAiDI8nWfZDhQWYCG4PFr+HMBQ6l5VPJybeRyJXwsdYJ/cRnlJV0yB4ZlUYtFQIkMZnst8fRrPcKezHCblz2IInMIkPzbbyb9mW42nWInc2xmE0y61AJ06oGsXL5rcOK1UdCbEXiVwNXsEy/6+EbaiVG8eeEAfxvaoSBnCH61uOD7BS1Ul8ESHBKWxCrdyd6EYNKihgEVrwOAbQruoytuBYIFfAc3gVN6iawhjKyNCEpYhVJXgbOzARyaU4hCtYizq5EI1YgiUoIlT1B7ZjByqmRWYbwtdYjoWoN7+LOIQefIqKawLzK6ID69GGpQgwhhEcwGGUzfEPAiPqsCXadFsAAAAASUVORK5CYII=&style=plastic)](https://github.com/intuit/auto)
 [![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=plastic&logo=kofi&logoColor=F5F5F5)](https://ko-fi.com/Alkaar)
 
-
-**Inital setup**
-**1. Install HomeBrew:**
+# Setup
+## Inital Setup
+### 1. Install HomeBrew:
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-**2. Enable HomeBrew:**
-  echo >> ~/.zprofile
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+### 2. Enable HomeBrew:
+  echo >> ~/.zprofile  
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile  
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
-**3. Install 3 tools:**
+### **3. Install 3 tools:**
   brew install git openjdk@17 sbt
 
-**4. Enable features:**
-  brew install --cask temurin@17
-  echo 'export JAVA_HOME=$(/usr/libexec/java_home -v17)' >> ~/.zprofile
-  echo 'export PATH="$JAVA_HOME/bin:$PATH"' >> ~/.zprofile
-  export JAVA_HOME=$(/usr/libexec/java_home -v17)
-  export PATH="$JAVA_HOME/bin:$PATH"
+### **4. Enable features:**
+  brew install --cask temurin@17  
+  echo 'export JAVA_HOME=$(/usr/libexec/java_home -v17)' >> ~/.zprofile  
+  echo 'export PATH="$JAVA_HOME/bin:$PATH"' >> ~/.zprofile  
+  export JAVA_HOME=$(/usr/libexec/java_home -v17)  
+  export PATH="$JAVA_HOME/bin:$PATH"  
   rm -rf ~/.sbt/boot
 
-**5. Clone Repo:**
+### **5. Clone Repo:**
   git clone https://github.com/ketanpatel1295/resy-booking-bot.git
 
-**6. Open folder and set reservation selection:**
-  cd resy-booking-bot
+### **6. Open folder and set reservation selection:**
+  cd resy-booking-bot  
   open -a TextEdit src/main/resources/resyConfig.conf
 
-**7. Run:**
+### **7. Run:**
   sbt clean '~run'
-
-
-
-**Next Time:**
-**1. Start it up:**
-  export JAVA_HOME=$(/usr/libexec/java_home -v17)
-  export PATH="$JAVA_HOME/bin:$PATH"
-  rm -rf ~/.sbt/boot
-  cd resy-booking-bot
-
-**2. Update Config file**
-  open -a TextEdit src/main/resources/resyConfig.conf
-
-**3. Run:**
-  sbt clean '~run'
-
-
   
+<br/>
+
+## **Next Time:**
+### **1. Start it up:**
+  export JAVA_HOME=$(/usr/libexec/java_home -v17)  
+  export PATH="$JAVA_HOME/bin:$PATH"  
+  rm -rf ~/.sbt/boot  
+  cd resy-booking-bot
+
+### **2. Update Config file**
+  open -a TextEdit src/main/resources/resyConfig.conf
+
+### **3. Run:**
+  sbt clean '~run'
+  
+<br/><br/><br/><br/>
+
 # resy-booking-bot
 ## Introduction
 This is a reservation booking bot designed to snipe reservations from [Resy](https://resy.com/) using the 
