@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
   "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--  com.resy.bot.plist  —  copy to ~/Library/LaunchAgents/ and load with launchctl  -->
+
 <plist version="1.0">
 <dict>
-  <!-- Unique label -->
+
   <key>Label</key>
   <string>com.resy.bot</string>
 
-  <!-- === When to fire (edit these two numbers only) === -->
   <key>StartCalendarInterval</key>
   <dict>
     <key>Hour</key>   <integer>9</integer>   <!-- 09 = 9 AM local time -->
     <key>Minute</key> <integer>0</integer>
   </dict>
 
-  <!-- Run our wrapper script via zsh so $HOME expands -->
   <key>ProgramArguments</key>
   <array>
     <string>/bin/zsh</string>
@@ -23,15 +21,12 @@
     <string>$HOME/resy-booking-bot/resy-bot.sh</string>
   </array>
 
-  <!-- Give the first run plenty of time (sec) -->
   <key>Timeout</key>
-  <integer>900</integer>
+  <integer>300</integer>
 
-  <!-- Wake the Mac if asleep at fire time -->
   <key>StartOnMount</key>
   <true/>
 
-  <!-- Don’t auto-restart if we unload after success -->
   <key>KeepAlive</key>
   <false/>
 </dict>
